@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightBlue);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: var(--text-clr);
+    overflow: visible;  
+    transition: background-color 500ms ease-out 100ms;
+    
+}
+
+:root{
+    --lightBlue:#00c1b5;
+    --blue:#1d3fbb;
+    --orange:#ff651a;
+    --red:#e30512;
+    --yellow:#ffbe00;
+    --text-clr: #251d20;
+}
+
+a{
+    color: white;
+}
+
+header{
+    width: 10rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+header img{
+    width: 100%;
+}
+
+.fullpage{
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.fullpage .book-container{
+    width: 100%;
+    height: 657px;
+    position: relative;
+}
+
+.fullpage .book-container .book-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.fullpage .book-container .book-content img{
+    max-width: 24rem;
+}
+
+.fullpage .book-container .book-content .book-content-text h4{
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.fullpage .book-container .book-content .book-content-text .buy-btn{
+    display: inline-block;
+    margin: 0.6rem 0;
+    font-weight: bolder;
+}
+.fullpage .book-container .book-content .book-content-text a:hover{
+    text-decoration: underline;
+}
+
+.fullpage .book-container .book-content .book-content-text p{
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.fullpage .book-container .book-content .book-content-text .stores{
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 3rem 1rem;
+}
+
+.footer-container .footer-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container .footer-content .footer-description {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.footer-container .footer-content .footer-description p{
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
+}
+
+.footer-container .footer-content .footer-description .copyright{
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-container .footer-content .footer-description a{
+    color: var(--text-clr);
+    text-decoration: underline;
+}
+
+.footer-container .footer-content .footer-description .privacy-policy{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-container .footer-content .contact{
+    text-align: center;
+}
+
+.footer-container .footer-content .contact a{
+    color: var(--text-clr);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-container .footer-content .menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-container .footer-content .menu a{
+    color: var(--text-clr);
+}
+
+@media screen and (min-width: 768px){
+    .fullpage{
+        margin-bottom:4rem;
+    }
+    .footer-container{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .footer-container .footer-content{
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .footer-container .footer-content .footer-description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    .footer-container .footer-content .footer-description p {
+        max-width: 17rem;
+        text-align: start;
+        line-height: 1.5rem;
+        font-size: 1.05rem;
+    }
+
+    .footer-container .footer-content .contact{
+        padding: 1rem;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .fullpage .book-container .book-content img{
+        max-width: 27rem;
+        transform: translateY(-2rem);
+        margin: -0.5rem;
+    }
+
+    .fullpage .book-container .book-content .book-content-text{
+        transform: translateY(-2rem);
+    }
+}
+
+.fixed{
+    position: fixed;
+}
+
+@media screen and (min-width: 992px){
+    header.fixed{
+        top: 1rem;
+        left: 1rem;
+    }
+    .footer-container .footer-content .footer-description.fixed{
+        bottom: 1rem;
+        left: 2rem;
+    }
+    .footer-container .footer-content .contact.fixed{
+        top: 1rem;
+        right: 2rem;
+    }
+    .footer-container .footer-content .menu.fixed{
+        display: flex;
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+
+
+
